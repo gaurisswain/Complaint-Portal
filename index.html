@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Portal</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body style="background:  linear-gradient(to top left, #ffffff 0%, #1bcce3 100%);">
+    <div class= "mainform">
+    <form>
+
+
+    <!--Header-->
+
+    <div class = "header">
+    <h1 style="text-align: center;"><b>Complaint Form</b></h1>
+        <p>Please send us details about the incident you would like to report. Our Complaint Center will analyze your complaint and take the appropriate measures 
+          in order that the reported situation will not occur at any other time in the future.</p>
+          <hr/>
+    </div>
+    
+
+    <br><br>
+    <!-- Name-->
+
+    <form action="welcome.php" method="post">
+
+    <div class="form-group">
+        <label for="fname" ><b>First Name:</b></label>
+        <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required="">
+      </div>
+
+     <br>
+
+      <div class="form-group">
+        <label for="lname"><b>Last Name:</b></label> 
+        <input type="text" class="form-control" id="lname" placeholder="Enter last name" name="lname" required="">
+      </div>
+   
+      <br>
+
+    <!-- Phone number-->
+    
+    <div class="form-group">
+        <label for="phoneNo"> <b>Phone Number: </b> </label>
+        <input type="tel" id="phone" class="form-control" placeholder="Enter Phone Number" name = "phoneNo" >
+      </div>
+    
+      <br>
+      <!-- Enter your email address -->
+
+      <div class="form-group">
+          <label for="email"><b>Email ID:</b></label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email Address" required="">
+      </div>
+      <br>
+    
+    <!-- Complaint Details-->
+
+    <label for="subject"><b>Complaint Details:</b></label>
+    <textarea id="subject" name="subject" placeholder="Enter your complaint details......." style="height:200px" required=""></textarea>
+    <br>
+
+    <!-- Date of inconinience -->
+    <label for="date"><b>Date of Inconvinince</b></label>
+    <input type="date" name="date" id="date" style="display:block;">
+    <br>
+
+
+    <!-- Suggestion Box -->
+
+    <label for="suggestions"><b>Suggestions:</b></label>
+    <textarea name="suggestions" id="suggestions" style="height:200px" placeholder="Any suggestions for the problem....."></textarea>
+    <br>
+
+    <!--Submit Button-->
+    <!-- <center> -->
+        <button type="button" class="btn btn-outline-primary" >Submit</button>
+         <button type="reset" class="btn btn-outline-primary" >Reset</button>
+    <!-- </center> -->
+    
+
+    </form>
+</div>
+
+</body>
+
+</html>
+
+
+
