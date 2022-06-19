@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complaint Portal</title>
+    <title>Data Collection Form</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,7 +12,7 @@
 </head>
 
 
-<body style="background:  linear-gradient(to top left, #ffffff 0%, #1bcce3 100%);">
+<body style="background: rgb(62,1,68); background: linear-gradient(137deg, rgba(62,1,68,1) 44%, rgba(222,135,12,1) 91%);">
     <div class= "mainform">
     <form>
 
@@ -20,70 +20,82 @@
     <!--Header-->
 
     <div class = "header">
-    <h1 style="text-align: center;"><b>Complaint Form</b></h1>
+    <h1 style="text-align: center;"><b>Data Collection Form</b></h1>
         <p>Please send us details about the incident you would like to report. Our Complaint Center will analyze your complaint and take the appropriate measures 
           in order that the reported situation will not occur at any other time in the future.</p>
-          <hr/>
+          <hr style="height:3px; text-align:center; width:75%; background: rgb(62,1,68); background: linear-gradient(135deg, rgba(62,1,68,1) 47%, rgba(222,135,12,1) 97%);">
     </div>
     
 
-    <br><br>
     <!-- Name-->
 
     <form action="welcome.php" method="post">
 
     <div class="form-group">
-        <label for="fname" ><b>First Name:</b></label>
-        <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required="">
+        <label for="fname" ><b>Name:</b></label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required="">
       </div>
-
-     <br>
-
-      <div class="form-group">
-        <label for="lname"><b>Last Name:</b></label> 
-        <input type="text" class="form-control" id="lname" placeholder="Enter last name" name="lname" required="">
-      </div>
-   
-      <br>
+    
 
     <!-- Phone number-->
     
     <div class="form-group">
-        <label for="phoneNo"> <b>Phone Number: </b> </label>
+        <label for="phoneNo"> <b>Phone Number:</b> </label>
         <input type="tel" id="phone" class="form-control" placeholder="Enter Phone Number" name = "phoneNo" >
       </div>
     
-      <br>
-      <!-- Enter your email address -->
+      <!-- Email address -->
 
       <div class="form-group">
           <label for="email"><b>Email ID:</b></label>
           <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email Address" required="">
       </div>
-      <br>
+
+    <!--Roll No-->
+
+    <div class="form-group">
+      <label for="rollNo"><b>Roll No:</b></label>
+      <input type="number" name="roll" id="roll" class="form-control" placeholder="Enter Your Roll Number" required="">
+    </div>
     
-    <!-- Complaint Details-->
+    <!--Department Dropdown-->
+    <div class="form-group">
+      <label for="Department"><b>Select Your Department:</b></label>
+      <select name="dept" id="dt">
+        <option value="aero">Aerospace Engineering</option>
+        <option value="chem">Chemical Engineering</option>
+        <option value="civil">Civil Engineering</option>
+        <option value="cse">Computer Science and Engineering</option>
+        <option value="elec">Electrical Engineering</option>
+        <option value="ep">Engineering Physics</option>
+        <option value="mech">Mechanical Engineering</option>
+        <option value="mems">Metallurgical Engineering and Material Sciences</option>
+        <option value="dese">Department of Energy Science and Engineering</option>
+        <option value="esed">Environmental Science and Engineering Department</option>
+        <option value="bschem">Chemistry</option>
+        <option value="bsmath">Mathematics</option>
+        <option value="other">Others</option>
+      </select>
+    </div>
 
-    <label for="subject"><b>Complaint Details:</b></label>
-    <textarea id="subject" name="subject" placeholder="Enter your complaint details......." style="height:200px" required=""></textarea>
-    <br>
+    <!-- TextArea-->
 
-    <!-- Date of inconinience -->
-    <label for="date"><b>Date of Inconvinince</b></label>
-    <input type="date" name="date" id="date" style="display:block;">
-    <br>
+    <label for="subject"><b>TextArea:</b></label>
+    <textarea id="subject" name="subject" placeholder="Text.." style="height:200px" required=""></textarea>
 
-
-    <!-- Suggestion Box -->
-
-    <label for="suggestions"><b>Suggestions:</b></label>
-    <textarea name="suggestions" id="suggestions" style="height:200px" placeholder="Any suggestions for the problem....."></textarea>
-    <br>
+    <!--Subsystems Checkbox-->
+    <label for="subsystems"><b>Select your Subsystem:</b></label><br>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> Subsystem 1 </label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> Subsystem 2 </label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> Subsystem 3 </label><br><br>
 
     <!--Submit Button-->
     <!-- <center> -->
-        <button type="button" class="btn btn-outline-primary" >Submit</button>
-         <button type="reset" class="btn btn-outline-primary" >Reset</button>
+        <button type="button" class="btn btn-outline-primary">Submit</button>
+        <button type="reset" class="btn btn-outline-primary">Reset</button>
     <!-- </center> -->
     
 
